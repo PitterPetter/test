@@ -36,7 +36,7 @@ jobs:
           context: .
           push: true
           tags: |
-            loventure/user-service:${{ github.sha::0:7 }}
+            loventure/user-service:${{ github.sha }}
             loventure/user-service:latest
       # IMAGE_NAME : prefix로 Docker Hub의 Repository 이름이 들어가야 함
 
