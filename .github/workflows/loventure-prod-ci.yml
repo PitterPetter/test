@@ -58,7 +58,7 @@ jobs:
         run: |
           cd manifests/charts/loventure
           # values.yaml 파일에서 auth-service 섹션의 tag 값만 업데이트
-          sed -i '/^auth-service:/,/^[a-zA-Z]/ { /tag:/ s|tag: .*|tag: ${{ steps.vars.outputs.sha_short }}| }' values.yaml
+          sed -i '/^auth-service:/,/^[a-zA-Z]/ { /^[[:space:]]*tag:/ s|tag: .*|tag: ${{ steps.vars.outputs.sha_short }}| }' values.yaml
           git config user.name "llokr1"
           git config user.email "ghdwlsrl100@gachon.ac.kr"
           git add values.yaml
