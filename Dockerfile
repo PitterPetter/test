@@ -1,4 +1,4 @@
-FROM openjdk:17-jdk
+FROM openjdk:17-alpine
 
 COPY /build/libs/*SNAPSHOT.jar ./auth-service.jar
 
